@@ -254,13 +254,13 @@ class WindField():
     def render(self):
         canvas=np.zeros((100*self.size,100*self.size,3),dtype=np.uint8)
         
-        triangle=imutils.resize(255*plt.imread(r"assets\triangle.png")[:,:,:3],width=50)
+        triangle=imutils.resize(255*plt.imread(r"triangle.png")[:,:,:3],width=50)
         canvas[25:75,25:75]=triangle
         
-        circle=imutils.resize(255*plt.imread(r"assets\circle.png")[:,:,:3],width=50)
+        circle=imutils.resize(255*plt.imread(r"circle.png")[:,:,:3],width=50)
         canvas[(100*self.size)-75:(100*self.size)-25,(100*self.size)-75:(100*self.size)-25]=circle
         
-        airplane=imutils.resize(255*plt.imread(r"assets\images.png")[:,:,:3],width=100)
+        airplane=imutils.resize(255*plt.imread(r"images.png")[:,:,:3],width=100)
         pos=(100*self.path[-1][1],100*self.path[-1][0])
         facing=self.state[2]
         facing_img={
